@@ -33,7 +33,7 @@ header .container,
 
 #about,
 #products {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .container-flex {
@@ -42,7 +42,7 @@ header .container,
 
 .container-grid {
   display: grid;
-  grid-template-columns: repeat(4, 24.5%);
+  grid-template-columns: repeat(4, 24.25%);
   column-gap: 1%;
   row-gap: 5%;
 }
@@ -58,6 +58,7 @@ header .container,
 
 .lista-produtos li img {
   max-width: 100%;
+  max-height: 145px;
 }
 
 .content h2 {
@@ -84,4 +85,25 @@ button {
   cursor: pointer;
   width: 100%;
   padding: 10px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .lista-produtos {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .container-grid {
+    grid-template-columns: repeat(2, 49.5%);
+  }
 }
